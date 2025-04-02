@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    font-family: "Raleway", sans-serif;
+}
+.main {
+    /* width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: auto;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative; */
+}
+.main2{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: auto;
+    transform-style: preserve-3d;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /* perspective: 1000px; */
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 32px;
+    padding: 10px;
+    filter: drop-shadow(10px 10px 20px gray);
+    box-shadow: 10px 10px 50px gray;
+    transition: transform 1s;
+    position: relative;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(10px 10px 20px gray);
+    position: absolute;
+    object-fit: contain;
+    inset: 50%;
+    translate: -50% -50%;
+    transition: transform 1s;
+}
+h1 {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    position: absolute;
+    /* top: 50%; */
+    left: 90%;
+    /* transform: translate(50%, 50%); */
+    /* transform-style: preserve-3d; */
+    /* pointer-events: none; */
+    font-size: 20px;
+    margin-left: 30%;
+    width: 300px;
+    filter: drop-shadow(10px 10px 20px gray);
+}
+
+.box:hover{
+    transform: translateZ(100px) rotateX(75deg);
+    box-shadow: 10px 10px 10px #999 -10px -10px -10px #fff;
+}
+
+.box:hover ~ img {
+    transform: translateY(-90px) translateZ(250px) rotateX(0deg);
+    width: 250px;
+    height: 250px;
+}
+
+.box:hover ~ h1 {
+    opacity: 1;
+    transform: 
+        translateY(-90px)
+        translate(-50%, -50%) /* Keep centered */
+        translateZ(250px) /* Bring text forward */
+}
